@@ -1,0 +1,42 @@
+#header {
+	height:100px;
+}
+
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;     /* Align the flex-items vertically */
+  justify-content: center; /* Optional, to align inner flex-items
+                              horizontally within the column  */
+}
+.auto-height {
+	height:100%;
+}
+h1 {
+	color : white;
+}
+.btn-invis {
+	border-radius : 5px;
+	border-color: black;
+	border-width :3px;
+	background: rgba(0,0,0,0);
+	color : rgba(255,255,255,1);
+	border-color : rgba(255,255,255,1);
+}
+
+.content {
+	height:100%;
+	background: rgba(11,120,153,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(11,120,153,1)), color-stop(100%, rgba(6,58,77,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b7899', endColorstr='#063a4d', GradientType=1 );
+}
