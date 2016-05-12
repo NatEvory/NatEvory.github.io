@@ -1,5 +1,5 @@
 #header {
-	height:175px;
+	height:100px;
 }
 
 .vertical-align {
@@ -46,20 +46,33 @@
 	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-.card h1 {
+
+
+.profile-card {
+	padding : 15px;
+	background-color : white;
+	width : 500px;
+	height : 125px;
+	position : absolute;
+	top : 20px;
+	left : 0;
+}
+
+.profile-card div {
+	display:inline-block;
+}
+
+h1 {
 	color : #727272;
 }
 
 .profile-image {
-	height: 150px;
-	width : 150px;
+	height: 100px;
+	width : 100px;
 	border-color:black;
 	border-width:10px;
 }
 
-h1 {
-	color : white;
-}
 .btn-invis {
 	border-radius : 5px;
 	border-width :3px;
