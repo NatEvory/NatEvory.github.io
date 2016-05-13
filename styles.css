@@ -1,5 +1,5 @@
 #header {
-	height:100px;
+	height:150px;
 }
 
 .vertical-align {
@@ -24,26 +24,34 @@
 
 .card {
 	background-color : white;
+	padding:20px;
+	margin-top : 25px;
+	margin-bottom : 25px;
 }
 
 .shadow-1 {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	z-index: 100;
 }
 
 .shadow-2 {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	z-index: 200;
 }
 
 .shadow-3 {
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	z-index: 300;
 }
 
 .shadow-4 {
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	z-index: 400;
 }
 
 .shadow-5 {
 	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	z-index: 500;
 }
 
 
@@ -53,10 +61,11 @@
 	background-color : white;
 	width : 500px;
 	height : 125px;
-	position : absolute;
+	position : fixed;
 	top : 20px;
 	left : 0;
 }
+
 
 .profile-card div {
 	display:inline-block;
@@ -101,13 +110,13 @@ h1 {
 
 .content {
 	padding-top : 25px;
-	height:100%;
 	background: rgba(11,120,153,1);
 	background: -moz-radial-gradient(center, ellipse cover, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(11,120,153,1)), color-stop(100%, rgba(6,58,77,1)));
 	background: -webkit-radial-gradient(center, ellipse cover, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
 	background: -o-radial-gradient(center, ellipse cover, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
 	background: -ms-radial-gradient(center, ellipse cover, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
-	background: radial-gradient(ellipse at center, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b7899', endColorstr='#063a4d', GradientType=1 );
+	background: radial-gradient(ellipse at center, rgba(11,120,153,1) 0%, rgba(6,58,77,1) 100%);
+	background-attachment: fixed;
 }
