@@ -6,7 +6,7 @@
 
 	function sizeProfile(){
 		var window_top = $window.scrollTop();
-		if(window_top > 0 && !isBig){
+		if(window_top > 100 && !isBig){
 			isBig = true;
 			shrinkProfile();
 		}
