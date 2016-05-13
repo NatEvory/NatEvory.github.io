@@ -1,6 +1,17 @@
 
 .top-padding {
-	height : 400px;
+	height : 350px;
+}
+
+@media (max-width:1600px){
+	.top-padding {
+		height:275px;
+	}
+}
+@media (max-width:1200px){
+	.top-padding {
+		height:175px;
+	}
 }
 
 .top-padding-small {
@@ -65,30 +76,75 @@
 	padding : 15px;
 	background-color : white;
 	width : 50%;
-	height : 400px;
+	height : 325px;
 	position : fixed;
 	top : 0 px;
 	left : 25%;
+}
+
+
+@media (max-width:1600px){
+	.profile-card{
+		height:250px;
+	}
+}
+
+@media (max-width:1200px){
+	.profile-card {
+		height:175px;
+	}
+}
+
+.profile-card h1 {
+	font-size: 5em;
+}
+@media (max-width:1600px ){
+	.profile-card h1 {
+		font-size : 3.5em;
+	}
+}
+
+@media (max-width:1200px){
+	.profile-card h1 {
+		font-size: 3.5em;
+	}
+}
+
+.profile-card div{
+	display:inline-block;
 }
 
 .profile-image{
 	height:250px;
 	width: 250px;
 }
+@media (max-width:1600px ){
+	.profile-image {
+		height:175px;
+		width:175px;
+	}
+}
+@media (max-width:1200px){
+	.profile-image {
+		height:100px;
+		width:100px;
+	}
+}
+
 
 .profile-card-small {
 	padding : 15px;
 	background-color : white;
 	width : 500px;
-	height : 125px;
+	height : 150px;
 	position : fixed;
 	top : 20px;
 	left : 0;
 }
 
 .profile-image-small {
-	height:100px;
-	width:100px;
+	height:80px;
+	width:80px;
 }
 
 .profile-card-small div {
@@ -103,8 +159,8 @@ h1 {
 	border-radius : 5px;
 	border-width :3px;
 	background: rgba(0,0,0,0);
-	color : rgba(255,255,255,1);
-	border-color : rgba(255,255,255,1);
+	color : #727272;
+	border-color : #727272;
 }
 .btn-invis:hover {
 	border-radius : 5px;
