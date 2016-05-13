@@ -162,6 +162,7 @@ h1 {
 	color : #727272;
 	border-color : #727272;
 }
+
 .btn-invis:hover {
 	border-radius : 5px;
 	border-color : rgba(175,175,175,1);
