@@ -1,124 +1,611 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-
-	    <!-- Latest compiled and minified CSS -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
-
-	    <!-- Optional theme -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" />
-
-	    <!-- Latest compiled and minified JavaScript -->
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="styles.css" />
-		<script src="scripts.js"></script>
+		<title>Nat Evory</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+	<body class="is-preload">
 
-	<body>
-		<div id="profile" class="profile-card shadow-3">
-			<div>
-				<img src="images/WebProfile.png" id="profile-image" class="profile-image img-circle shadow-2" />
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.png" alt="" /></a>
+					<h1><strong>Nat Evory</strong><br/> a technology professional<br/> with 15+ years of experience.<br /></h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>About me</h2>
+						</header>
+						<p>I am a technology professional with a wide range of experience. Backend, frontend, cloud, CI/CD, infrastructure as code, IT support, vendor management, software implementation, integrations, and more. 
+							Chances are if technology is involved, I have some experience with it. 
+							I have lead teams of developers, managed complex projects with tight deadlines, identified and hired top tech talent, architected solutions to deliver business value, and managed budgets.
+							I believe in quickly delivering value to meet the businesses immediate needs, while planning for the future, and long term success. 
+							If you want someone like this in your organization, contact me and let's talk about what the future holds.
+						</p>
+						<ul class="actions">
+							<li><a href="#contact" class="button">Start a conversation</a></li>
+						</ul>
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Experience</h2>
+						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<div class="image fit exp-box" id="xenith-exp-box">
+									<img src="images/Xenith_X_Thumb.jpg" alt=""  />
+								</div>
+								<h3>Xenith</h3>
+								<p>Director of Technology</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<div class="image fit exp-box" id="ford-direct-exp-box">
+									<img src="images/FordDirect_Thumb.jpg" alt=""  />
+								</div>
+								<h3>Ford Direct</h3>
+								<p>Development Team Lead</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<div class="image fit exp-box" id="infoready-exp-box">
+									<img src="images/InfoReady_Thumb.jpg" alt=""  />
+								</div>
+								<h3>InfoReady Corporation</h3>
+								<p>Software Developer</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<div class="image fit exp-box" id="great-taste-exp-box">
+									<img src="images/GreatTaste.jpg" alt=""  />
+								</div>
+								<h3>Great Taste Cuisine</h3>
+								<p>Co-Founder/Head Chef</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<div class="image fit exp-box" id="sapiens-exp-box">
+									<img src="images/Sapiens_Thumb.jpg" alt=""  />
+								</div>
+								<h3>Sapiens</h3>
+								<p>Contract Programmer</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<div class="image fit exp-box" id="etx-exp-box">
+									<img src="images/eTrans_Thumb.png" alt=""  />
+								</div>
+								<h3>eTrans Consulting</h3>
+								<p>Lead Software Engineer</p>
+							</article>
+						</div>
+					</section>
+				<!-- Work Experience Modals -->
+					<div id="xenith-exp-modal" class="exp-modal-content" >
+						<h2>Xenith</h2>
+						<h3>10/2017 - Present</h3>
+						<p><b>Roles:</b> Director of Technology, Team Leader of Engineering, Integration Solutions Architect</p>
+						<h4>Responsibilities</h4>
+						<p>
+							Lead the technology team, create a culture of cross functional collaboration, and technical excellence.
+							Establish trust and maintain relationships with other areas of the business and coordinate the execution of company strategy with other leaders.
+							Identify, recruit, hire, onboard, and retain exceptional technical talent.
+							Ensure the delivery of projects on time, in budget and meeting requirements, including project management, coordinating with other areas of the business, managing internal resources and vendors.
+							Architect solutions to solve Xenith's immediate business needs, while balancing potential future requirements, and maintainability. 
+						</p>
+						<h4>Technology Used</h4>
+						<p>
+							<b>Platforms:</b> Amazon Web Services (AWS), Azure, Mulesoft, SalesForce, Shopify, Salesforce, GitHub<br/>
+							<b>Frameworks:</b> NestJS, Angular, React, Gatsby Terraform, CloudFormation, Lambda, SNS, SQS, Aurora, MySQL, MSSQL<br/>
+							<b>Languages:</b> Javascript, Typescript, Java, DataWeave, SQL, .NET, liquid
+						</p>
+						<h4>Projects and Achievements</h4>
+						<h5>Devlopment Optimization and Standardization</h5>
+						<p>
+							Lead the team in setting standards for development, integration, and deployment.
+						</p>
+						<hr/>
+						<h5>Order to Cash Pipeline</h5>
+						<p>
+							Architected and lead the team in building a robust, message driven, multi-channel sales order pipline for Xenith's e-commerce platforms and retail partners.
+							The solution was designed to be flexible and be easily updated to meet changing business needs. 
+						</p>
+						<hr/>
+						<h5>SKU to BOM</h5>
+						<p>
+							Created and implemented an algorithm to take a custom product with millions of potential configuration combinations and generate a bill of materials, including the optimal use of build components.
+						</p>
+						<hr/>
+						<h5>SalesForce Implementation</h5>
+						<p>
+							Lead the team in setting standards for development, integration, and deployment.
+						</p>
+						<hr/>
+						<h5>ERP Migration to Azure</h5>
+						<p>
+							Lead the team in setting standards for development, integration, and deployment.
+						</p>
+						<hr/>
+					</div>
+					<div id="ford-direct-exp-modal" class="exp-modal-content">
+						<h2>Ford Direct</h2>
+						<h5>Contracted from Arrow Strategies</h5>
+						<h3>09/2016 - 10/2017</h3>
+						<p><b>Roles:</b> Development Team Lead, Developer</p>
+						<h4>Responsibilities</h4>
+						<p>
+							
+						</p>
+						<h4>Technology Used</h4>
+						<p>
+							<b>Platforms:</b> Adobe Experience Manager (AEM), IBM WebSphere, Atlassian<br/>
+							<b>Frameworks:</b> Java Enterprise (J2EE), Hibernate, Angular<br/>
+							<b>Languages:</b> Javascript, Java, DataWeave, SQL, .NET, liquid
+						</p>
+					</div>
+					<div id="infoready-exp-modal" class="exp-modal-content">
+						<h2>InfoReady Corporation</h2>
+						<h3>09/2016 - 10/2017</h3>
+						<p><b>Roles:</b> Software Developer, Contracting Software Developer</p>
+						<h4>Responsibilities</h4>
+						<p>
+							
+						</p>
+						<h4>Technology Used</h4>
+						<p>
+							<b>Platforms:</b> Adobe Experience Manager (AEM), IBM WebSphere, Atlassian<br/>
+							<b>Frameworks:</b> Java Enterprise (J2EE), Hibernate, Angular<br/>
+							<b>Languages:</b> Javascript, Java, DataWeave, SQL, .NET, liquid
+						</p>
+					</div>
+					<div id="great-taste-exp-modal" class="exp-modal-content">
+						<h2>Great Taste Cuisine</h2>
+						<h3>09/2016 - 10/2017</h3>
+						<p><b>Roles:</b> Co-Founder and Head Chef</p>
+						<h4>Responsibilities</h4>
+						<p>
+							
+						</p>
+					</div>
+					<div id="sapiens-exp-modal" class="exp-modal-content">
+						<h2>Sapiens</h2>
+						<h3>2006</h3>
+						<p><b>Roles:</b> Contract Programmer</p>
+						<h4>Responsibilities</h4>
+						<p>
+							Develop a reporting platform and create reports for a statewide insurance group. 
+							The reports had to handle complex data relationships and conditions.
+							Accuracy and robustness were very high priority, because the reports were used to evaluate insurance policies.
+						</p>
+						<h4>Technology Used</h4>
+						<p>
+							<b>Frameworks:</b> Java Enterprise (J2EE), Jasper Reports<br/>
+							<b>Languages:</b> Java
+						</p>
+					</div>
+					<div id="etx-exp-modal" class="exp-modal-content">
+						<h2>eTrans Consulting</h2>
+						<h3>2000 - 2005</h3>
+						<p><b>Roles:</b> Lead Software Developer, Software Developer, Development Intern</p>
+						<h4>Responsibilities</h4>
+						<p>
+							Develop and maintain software systems for international trade finance platform.
+						</p>
+						<h4>Technology Used</h4>
+						<p>
+							<b>Platforms:</b> IBM WebSphere, Apache Tomcat<br/>
+							<b>Frameworks:</b> Java Enterprise (J2EE), Java Server Pages (JSP), Servlets, Hibernate<br/>
+							<b>Languages:</b> Java, C, C++
+						</p>
+						<h4>Projects and Achievements</h4>
+						<h5>eTransXpress</h5>
+						<p>
+							Contribute to the design and development of eTransXpress, a platform for managing international trade finance contracts.
+							The platform was used in production by banks around the world. I also assisted in deploying the platform at bank locations in Europe.
+						</p>
+						<hr/>
+						<h5>Object Relational Mapper (ORM)</h5>
+						<p>
+							Built a custom high performance object relational mapper library for the eTransXpress platform. 
+							The ORM used XML configuration and introspection to generate high performance SQL queries to create, read, update and delete records in a SQL database.
+						</p>
+						<hr/>
+						<h5>JNI integration with finance ban list</h5>
+						<p>
+							Created an Java Native Interface integration with a C library of restricted financing entities. 
+							Allowing the platform to flag potentially illegal funds transfers, and meeting international finance regulations.
+						</p>
+						<hr/>
+					</div>
+				<!-- Three -->
+					<section id="three">
+						<a id="contact"></a>
+						<h2>Get In Touch</h2>
+						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<form method="post" action="#">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+										Plymouth, MI<br />
+										United States
+									</li>
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="mailto:hello@natevory.com">hello@natevory.com</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+				<!-- Four -->
+				
+					<!-- <section id="four">
+						<h2>Elements</h2>
+
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
+
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="col-6 col-12-xsmall">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button primary small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a class="button primary" id="workmodal2">Default (with modal)</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Primary</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button large">Large</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button primary fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button primary disabled">Primary</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row gtr-uniform gtr-50">
+									<div class="col-6 col-12-xsmall">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<select name="demo-category" id="demo-category">
+											<option value="">- Category -</option>
+											<option value="1">Manufacturing</option>
+											<option value="1">Shipping</option>
+											<option value="1">Administration</option>
+											<option value="1">Human Resources</option>
+										</select>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="col-12">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
+
+					</section>
+				
+
 			</div>
-			<div>
-				<h1>Nathaniel Evory</h1>
-			</div>
-			<div class="col-sm-offset-3 col-sm-9">
-				<div class="col-sm-4 text-center vertical">
-					<a href= "mailto:me@NatEvory.com" class= "btn btn-md btn-invis" ><span class= "glyphicon glyphicon-envelope" ></span> Email</a>
+		-->
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://linkedin.com/in/natevory" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<!-- <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li> -->
+						<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+						<li><a href="#contact" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<!-- <ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul> -->
 				</div>
+			</footer>
 
-				<div class="col-sm-4 text-center">
-					<a href= "https://www.linkedin.com/in/NatEvory" target="_blank" class="btn btn-md btn-invis">
-						LinkedIn
-			</a>
-				</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-				<div class="col-sm-4 text-center">
-					<a href="https://www.dropbox.com/s/mldwqbfo6vvy3pm/NathanielEvory_Resume.pdf?dl=0"  target="_blank" class="btn btn-md btn-invis"><span class="glyphicon glyphicon-file"></span> Resume</a>
-				</div>
-			</div>
-		</div>
-		<div class="container-fluid content">
-			<div class="vertical-align top-padding" id="header">
-
-			</div>
-				<div class="card col-sm-offset-3 col-sm-6 shadow-2">
-					<h2><strong>Who I am</strong></h2>
-					 <p>
-						 <h3>Multi-talented Individual
-					 	<small>with a wealth of knowledge in a wide range of fields, always seeking to improve and learn new skills. Self-motivated, adaptable and hard working.</small></h3>
-					</p>
-					<p>
-						<h3>Innovative software engineer
-						 <small>offering eight years of experience in full software development lifecycle, from concept through delivery and customizable solutions.</small></h3>
-					 </p>
-					 <p>
-						 <h3>Known for excellent troubleshooting skills
-						 <small> able to analyze code,  engineer well-researched, cost effective and responsive solutions. Experience dealing with legacy systems and managing technical debt.</small>
-					 </p>
-					 <p>
-						 <h3>Effective Collaborator
-						  <small>with the ability to work well in a team environment with remote partners, and maintaining positive working relationships.</small>
-					  </p>
-				</div>
-				<br />
-				<div class = "card col-sm-offset-3 col-sm-6 shadow-2">
-					<h2><strong>Professional Experience</strong></h2>
-					<div class="row vertical-align">
-						<div class="col-sm-8"><div class="col-sm-12 text-left">
-							<h3>Software Developer <br /><small>InfoReady Corporation - Ann Arbor, MI</small></h3>
-						</div></div>
-						<div class="col-sm-4 text-right">
-							<strong>2014 - Present</strong>
-						</div>
-					</div>
-
-					<div class="row vertical-align">
-						<div class="col-sm-8"><div class="col-sm-12 text-left">
-							<h3>Lead Technical Advisor<br /><small>Carry.Us.org - Ann Arbor, MI</small></h3>
-						</div></div>
-						<div class="col-sm-4 text-right">
-							<strong>2016 - Present</strong>
-						</div>
-					</div>
-
-					<div class="row vertical-align">
-						<div class="col-sm-8"><div class="col-sm-12 text-left">
-							<h3>Co-Owner/Chef<br /><small>Great Taste Cuisine - Farmington Hills, MI</small></h3>
-						</div></div>
-						<div class="col-sm-4 text-right">
-							<strong>2008 - 2012</strong>
-						</div>
-					</div>
-
-					<div class="row vertical-align">
-						<div class="col-sm-8"><div class="col-sm-12 text-left">
-							<h3>Prep Cook<br /><small>Rocky's Rotisserie - Livonia, MI</small></h3>
-						</div></div>
-						<div class="col-sm-4 text-right">
-							<strong>2007</strong>
-						</div>
-					</div>
-
-					<div class="row vertical-align">
-						<div class="col-sm-8"><div class="col-sm-12 text-left">
-							<h3>Contracting Software Engineer<br /><small>Sapiens Americas - Cary, NC</small></h3>
-						</div></div>
-						<div class="col-sm-4 text-right">
-							<strong>2006</strong>
-						</div>
-					</div>
-
-					<div class="row vertical-align">
-						<div class="col-sm-8"><div class="col-sm-12 text-left">
-							<h3>Software Engineer<br /><small>eTrans Consulting - Southfield, MI</small></h3>
-						</div></div>
-						<div class="col-sm-4 text-right">
-							<strong>2000-2005</strong>
-						</div>
-					</div>
-				</div>
-		</div>
 	</body>
 </html>
