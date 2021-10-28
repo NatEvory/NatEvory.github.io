@@ -32,7 +32,6 @@
         })
 
         function submitForm(data){
-            console.log(data);
             if(simulateSubmit){
                 if(simulateError){
                     onSubmitError(new Error("A simulated Error occurred!"))
@@ -46,7 +45,6 @@
         }
 
         function onSubmitSuccess(){
-            console.log("GREAT SUCCESS!");
             $contactForm.fadeOut(500,()=>{$contactSuccess.fadeIn(500)});
             // $contactSuccess.removeClass('hidden');
 
