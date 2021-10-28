@@ -272,16 +272,15 @@
 						<h2>Get In Touch</h2>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="POST" action="https://formspree.io/f/xdoyvqab">
+								<form id="contactForm" action="#">
 									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12 col-12-xsmall"><input type="text" name="company" id="company" placeholder="Company"/></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-										<div class='col-6 col-12-xsmall'><input type="submit" value="Send Message" /></div>
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="contactName" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="contactEmail" placeholder="Email" /></div>
+										<div class="col-12 col-12-xsmall"><input type="text" name="company" id="contactCompany" placeholder="Company"/></div>
+										<div class="col-12"><textarea name="message" id="contactMessage" placeholder="Message" rows="4"></textarea></div>
+										<div class='col-6 col-12-xsmall'><input type="submit" value="Send Message" id="contactSubmit" /></div>
 									</div>
 								</form>
-								
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
@@ -644,6 +643,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/form.js"></script>
 
 	</body>
 </html>
