@@ -26,8 +26,7 @@
                 name:$contactName.val(),
                 email:$contactEmail.val(),
                 company:$contactCompany.val(),
-                message:$contactMessage.val(),
-
+                message:$contactMessage.val()
             }
             submitForm(submissionData);
         })
