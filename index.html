@@ -271,7 +271,7 @@
 						<a id="contact"></a>
 						<h2>Get In Touch</h2>
 						<div class="row">
-							<div class="col-8 col-12-small">
+							<div class="col-8 col-12-small" id="contactDiv">
 								<form id="contactForm" action="#">
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="contactName" placeholder="Name" /></div>
@@ -279,9 +279,16 @@
 										<div class="col-12 col-12-xsmall"><input type="text" name="company" id="contactCompany" placeholder="Company"/></div>
 										<div class="col-12"><textarea name="message" id="contactMessage" placeholder="Message" rows="4"></textarea></div>
 										<div class='col-6 col-12-xsmall'><input type="submit" value="Send Message" id="contactSubmit" /></div>
+										<div class='col-12 col-12-xsmall hidden' id="contactError"><h4 class="error-message">Sorry, an error has occurred! Please try again later.</h4></div>
 									</div>
 								</form>
+								<div class="col-12 col-12-small hidden" id="contactSuccess">
+									<h3 class="align-center">Thank you for you message!</h3>
+								</div>
+
 							</div>
+							
+							
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
 									<li>
@@ -300,7 +307,7 @@
 
 				<!-- Four -->
 				
-					<!-- <section id="four">
+					<section id="four">
 						<h2>Elements</h2>
 
 						<section>
@@ -617,7 +624,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				
 
 			</div>
-		-->
+		
 
 
 		<!-- Footer -->

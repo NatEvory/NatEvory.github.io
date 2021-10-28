@@ -292,6 +292,14 @@ input, select, textarea {
 
 /* Custom */
 
+	.hidden {
+		display: none;
+	}
+
+	.error-message {
+		color: #d41616
+	}
+
 	.exp-box {
 		cursor: pointer;
 	}
