@@ -5,7 +5,7 @@
     // var contactSubmitEndpoint = "https://formspree.io/f/xdoyvqab";
     var contactSubmitEndpoint = "https://google.com/failure";
     var simulateSubmit = true;
-    var simulateError = true;
+    var simulateError = false;
 
     $window.on('load',function(){
         var $contactForm = $('#contactForm'),
