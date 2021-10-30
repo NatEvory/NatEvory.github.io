@@ -119,6 +119,7 @@ input, select, textarea {
 			border-bottom-color: transparent;
 			color: #4968bf !important;
 			text-decoration: none;
+			cursor: pointer;
 		}
 
 	strong, b {

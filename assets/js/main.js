@@ -116,37 +116,15 @@
 
 		// Modals
 			$window.on('load',function(){
+				let companyList = ['xenith','ford-direct','infoready','great-taste','sapiens','etx'];
 
-				new jBox('Modal', {
-					attach: '#xenith-exp-box',
-					content: $('#xenith-exp-modal'),
-					maxWidth: 1600
-				});
-				new jBox('Modal', {
-					attach: '#ford-direct-exp-box',
-					content: $('#ford-direct-exp-modal'),
-					maxWidth: 1600
-				});
-				new jBox('Modal', {
-					attach: '#infoready-exp-box',
-					content: $('#infoready-exp-modal'),
-					maxWidth: 1600
-				});
-				new jBox('Modal', {
-					attach: '#great-taste-exp-box',
-					content: $('#great-taste-exp-modal'),
-					maxWidth: 1600
-				});
-				new jBox('Modal', {
-					attach: '#sapiens-exp-box',
-					content: $('#sapiens-exp-modal'),
-					maxWidth: 1600
-				});
-				new jBox('Modal', {
-					attach: '#etx-exp-box',
-					content: $('#etx-exp-modal'),
-					maxWidth: 1600
-				});
+				companyList.forEach((company)=>{
+					new jBox('Modal', {
+						attach: '.'+company+'-exp-link',
+						content: $('#'+company+'-exp-modal'),
+						maxWidth: 1600
+					});
+				})
 			})
 		
 
