@@ -4,8 +4,18 @@
     
     var contactSubmitEndpoint = "https://formspree.io/f/xdoyvqab";
     //var contactSubmitEndpoint = "https://google.com/failure";
-    var simulateSubmit = false;
-    var simulateError = false;
+    var pageHostname = document.location.hostname;
+
+    switch (pageHostname) {
+        case "localhost":
+            contactSubmitEndpoint = "http://localhost:8042/submit"
+            simulateSubmit = window.simulateSubmit? true:false;
+            break;
+    
+        default:
+            break;
+    }
+    
 
     $window.on('load',function(){
         var $contactForm = $('#contactForm'),
@@ -32,6 +42,7 @@
         })
 
         function submitForm(data){
+            let {simulateSubmit,simulateError} = checkSim();
             if(simulateSubmit){
                 if(simulateError){
                     onSubmitError(new Error("A simulated Error occurred!"))
@@ -42,6 +53,16 @@
                 $.post(contactSubmitEndpoint,data,onSubmitSuccess,'json').fail(onSubmitError);
             }
             
+        }
+
+        function checkSim(){
+            let sim = {simulateSubmit:false,simulateError:false};
+            if(window.simulateSubmit !== true){
+                return sim;
+            }
+            sim.simulateSubmit = true;
+            sim.simulateError = window.simulateError === true?true:false;
+            return sim;
         }
 
         function onSubmitSuccess(){
