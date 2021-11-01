@@ -45,8 +45,10 @@
             let {simulateSubmit,simulateError} = checkSim();
             if(simulateSubmit){
                 if(simulateError){
+                    console.log("Throw simulated Error")
                     onSubmitError(new Error("A simulated Error occurred!"))
                 } else {
+                    console.log("Simulated success");
                     onSubmitSuccess("You did it hooray!");
                 }
             } else {
