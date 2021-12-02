@@ -126,6 +126,35 @@
 					});
 				})
 			})
+
+		// Cookie notification
+		$window.on('load',function(){
+			new jBox('Notice', {
+				content: $('#cookie-popup-content'),
+				closeOnClick:true,
+				closeOnEsc:true,
+				closeOnMouseLeave:false,
+				autoClose:false,
+				delayOpen:500,
+				closeButton:true,
+				onClose:function(){
+					console.log("Cookies Accepted!");
+					if(location.hostname === 'www.natevory.com'){
+						gtag('consent', 'update', {
+							'analytics_storage': 'granted'
+						});
+					} else {
+						console.log("pretending to add cookies");
+					}
+
+				},
+				animation:{
+					open:'pulse',
+					close:'flip'
+				}
+			});
+			
+		})
 		
 
 

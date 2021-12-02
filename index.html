@@ -6,6 +6,18 @@
 -->
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77471324-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('consent', 'default', {
+				'ad_storage': 'denied',
+				'analytics_storage': 'denied'
+			})
+			gtag('js', new Date());
+			gtag('config', 'UA-77471324-1');
+		</script>
 		<title>Nat Evory</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -683,7 +695,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 		-->
 		
-
+		<!-- Cookie Popup Modal -->
+		<div  style='display:none'>
+			<div id='cookie-popup-content'>
+				<span>🍪 This site uses cookies 🍪<br/> by continuing you agree to accept cookies</span><br/>
+				<!-- <input id="cookie-popup-accept" type="button" value="Accept Cookies" class="button cookie-popup-accept">--></input><a href="https://www.eff.org" class="button primary">Flee to safety</a>
+			</div>
+		</div>
 
 		<!-- Footer -->
 			<footer id="footer">
