@@ -116,7 +116,7 @@
 
 		// Modals
 			$window.on('load',function(){
-				let companyList = ['xenith','ford-direct','infoready','great-taste','sapiens','etx'];
+				let companyList = ['chief','xenith','ford-direct','infoready','great-taste','sapiens','etx'];
 
 				companyList.forEach((company)=>{
 					new jBox('Modal', {
