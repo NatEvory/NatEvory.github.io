@@ -395,24 +395,74 @@ body {
 	object-fit: cover;
 }
 
+.experience-card {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	border: none;
+	border-radius: 1.5rem;
+	background: rgba(255, 255, 255, 0.01);
+	padding-bottom: 0;
+	box-shadow: var(--glow);
+	position: relative;
+	overflow: visible;
+}
+
+.experience-card::after {
+	content: '';
+	position: absolute;
+	inset: -6px;
+	border-radius: 1.6rem;
+	background: radial-gradient(circle at 50% 0%, rgba(99, 245, 255, 0.55), transparent 55%), radial-gradient(circle at 10% 90%, rgba(168, 116, 255, 0.35), transparent 55%);
+	filter: blur(45px);
+	z-index: -1;
+}
+
+.experience-card .card-img-top {
+	border-top-left-radius: 1.5rem;
+	border-top-right-radius: 1.5rem;
+	position: relative;
+	z-index: 1;
+}
+
 .experience-card .card-body {
 	background: var(--card-bg);
 	border: 1px solid var(--border-soft);
 	border-top: none;
 	border-bottom-left-radius: 1.5rem;
 	border-bottom-right-radius: 1.5rem;
-	box-shadow: var(--glow);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 1.5rem;
+	position: relative;
+	z-index: 1;
+}
+
+[data-bs-theme='light'] .experience-card {
+	box-shadow: 0 35px 90px rgba(13, 22, 53, 0.18);
+	background: linear-gradient(180deg, #fefeff 0%, #f3f6ff 70%);
+}
+
+[data-bs-theme='light'] .experience-card::after {
+	background: radial-gradient(circle at 50% 0%, rgba(15, 23, 42, 0.25), transparent 60%), radial-gradient(circle at 10% 90%, rgba(63, 81, 181, 0.2), transparent 60%);
+	filter: blur(40px);
 }
 
 [data-bs-theme='light'] .experience-card .card-body {
 	background: #fff;
-	box-shadow: none;
 	border-color: rgba(15, 23, 42, 0.08);
+	box-shadow: inset 0 1px 0 rgba(15, 23, 42, 0.06);
 }
 
 .experience-card ul {
 	padding-left: 1.25rem;
 	color: var(--bs-body-secondary);
+}
+
+.experience-card .btn {
+	margin-top: auto;
 }
 
 .contact-section {
