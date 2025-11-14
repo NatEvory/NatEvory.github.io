@@ -1,199 +1,91 @@
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-(function($) {
-
-	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$footer = $('#footer'),
-		$main = $('#main'),
-		settings = {
-
-			// Parallax background effect?
-				parallax: true,
-
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 20
-
-		};
-
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1800px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ],
-		});
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Touch?
-		if (browser.mobile) {
-
-			// Turn on touch mode.
-				$body.addClass('is-touch');
-
-			// Height fix (mostly for iOS).
-				window.setTimeout(function() {
-					$window.scrollTop($window.scrollTop() + 1);
-				}, 0);
-
+(() => {
+	const root = document.documentElement;
+	const themeToggle = document.getElementById('themeToggle');
+	const themeIcon = themeToggle ? themeToggle.querySelector('.theme-icon') : null;
+	const storageKey = 'preferred-theme';
+	const systemMedia = window.matchMedia('(prefers-color-scheme: dark)');
+	const onSystemThemeChange = (event) => {
+		if (!getStoredTheme()) {
+			setTheme(event.matches ? 'dark' : 'light', false);
 		}
+	};
 
-	// Footer.
-		breakpoints.on('<=medium', function() {
-			$footer.insertAfter($main);
-		});
+	const getStoredTheme = () => localStorage.getItem(storageKey);
+	const getPreferredTheme = () => {
+		const storedTheme = getStoredTheme();
+		if (storedTheme) return storedTheme;
+		return systemMedia.matches ? 'dark' : 'light';
+	};
 
-		breakpoints.on('>medium', function() {
-			$footer.appendTo($header);
-		});
+	const updateThemeIcon = (theme) => {
+		if (!themeIcon) return;
+		themeIcon.classList.remove('fa-sun', 'fa-moon');
+		if (theme === 'dark') {
+			themeIcon.classList.add('fa-sun');
+			themeToggle?.setAttribute('aria-label', 'Switch to light mode');
+		} else {
+			themeIcon.classList.add('fa-moon');
+			themeToggle?.setAttribute('aria-label', 'Switch to dark mode');
+		}
+	};
 
-	// Header.
+	const setTheme = (theme, persist = true) => {
+		root.setAttribute('data-bs-theme', theme);
+		if (persist) {
+			localStorage.setItem(storageKey, theme);
+		}
+		updateThemeIcon(theme);
+	};
 
-		// Parallax background.
+	setTheme(getPreferredTheme(), false);
 
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (browser.name == 'ie'
-				||	browser.mobile)
-					settings.parallax = false;
+	themeToggle?.addEventListener('click', () => {
+		const currentTheme = root.getAttribute('data-bs-theme');
+		const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+		setTheme(newTheme);
+	});
 
-			if (settings.parallax) {
+	if (typeof systemMedia.addEventListener === 'function') {
+		systemMedia.addEventListener('change', onSystemThemeChange);
+	} else if (typeof systemMedia.addListener === 'function') {
+		systemMedia.addListener(onSystemThemeChange);
+	}
 
-				breakpoints.on('<=medium', function() {
-
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
-
-				});
-
-				breakpoints.on('>medium', function() {
-
-					$header.css('background-position', 'left 0px');
-
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
-
-				});
-
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
-
-			}
-
-	// Main Sections: Two.
-
-		// Lightbox gallery.
-			// $window.on('load', function() {
-
-			// 	$('#two').poptrox({
-			// 		caption: function($a) { return $a.next('h3').text(); },
-			// 		overlayColor: '#2c2c2c',
-			// 		overlayOpacity: 0.85,
-			// 		popupCloserText: '',
-			// 		popupLoaderText: '',
-			// 		selector: '.work-item a.image',
-			// 		usePopupCaption: true,
-			// 		usePopupDefaultStyling: false,
-			// 		usePopupEasyClose: false,
-			// 		usePopupNav: true,
-			// 		windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-			// 	});
-
-			// });
-
-		// Modals
-			$window.on('load',function(){
-				let companyList = ['chief','xenith','ford-direct','infoready','great-taste','sapiens','etx'];
-
-				companyList.forEach((company)=>{
-					new jBox('Modal', {
-						attach: '.'+company+'-exp-link',
-						content: $('#'+company+'-exp-modal'),
-						maxWidth: 1600
-					});
-				})
-			})
-
-		// Cookie notification
-		$window.on('load',function(){
-			new jBox('Notice', {
-				content: $('#cookie-popup-content'),
-				closeOnClick:true,
-				closeOnEsc:true,
-				closeOnMouseLeave:false,
-				autoClose:false,
-				delayOpen:500,
-				closeButton:true,
-				onClose:function(){
-					console.log("Cookies Accepted!");
-					if(location.hostname === 'www.natevory.com'){
-						gtag('consent', 'update', {
-							'analytics_storage': 'granted'
-						});
-					} else {
-						console.log("pretending to add cookies");
-					}
-
-				},
-				animation:{
-					open:'pulse',
-					close:'flip'
-				}
-			});
-			
-		})
-		
-
-
-	// ---- SMOOTH SCROLL ------
-		// Select all links with hashes
-		$('a[href*="#"]')
-		// Remove links that don't actually link to anything
-		// .not('[href="#"]')
-		.not('[href="#0"]')
-		.click(function(event) {
-		// On-page links
-		if (
-			location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-			&& 
-			location.hostname == this.hostname
-		) {
-			// Figure out element to scroll to
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			// Does a scroll target exist?
-			if (target.length) {
-			// Only prevent default if animation is actually gonna happen
+	// Smooth scroll for in-page navigation
+	document.querySelectorAll('[data-scroll]').forEach((link) => {
+		link.addEventListener('click', (event) => {
+			const href = link.getAttribute('href');
+			if (!href || !href.startsWith('#')) return;
+			const target = document.querySelector(href);
+			if (!target) return;
 			event.preventDefault();
-			$('html, body').animate({
-				scrollTop: target.offset().top
-			}, 1000, function() {
-				// Callback after animation
-				// Must change focus!
-				var $target = $(target);
-				$target.focus();
-				if ($target.is(":focus")) { // Checking if the target was focused
-				return false;
-				} else {
-				$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-				$target.focus(); // Set focus again
-				};
-			});
-			}
-		}
+			target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			link.blur();
 		});
+	});
 
-})(jQuery);
+	// Cookie consent
+	const consentKey = 'cookieConsent';
+	const cookieBanner = document.getElementById('cookieBanner');
+	const acceptCookies = document.getElementById('acceptCookies');
+
+	if (cookieBanner && !localStorage.getItem(consentKey)) {
+		cookieBanner.classList.add('show');
+	}
+
+	acceptCookies?.addEventListener('click', () => {
+		localStorage.setItem(consentKey, 'accepted');
+		cookieBanner?.classList.remove('show');
+		if (typeof gtag === 'function' && location.hostname === 'www.natevory.com') {
+			gtag('consent', 'update', {
+				analytics_storage: 'granted',
+			});
+		}
+	});
+
+	// Footer year
+	const yearEl = document.getElementById('currentYear');
+	if (yearEl) {
+		yearEl.textContent = new Date().getFullYear();
+	}
+})();

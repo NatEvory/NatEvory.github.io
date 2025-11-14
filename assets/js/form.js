@@ -1,81 +1,74 @@
-(function($) {
+(() => {
+	const form = document.getElementById('contactForm');
+	if (!form) return;
 
-    var $window = $(window);
-    
-    var contactSubmitEndpoint = "https://formspree.io/f/xdoyvqab";
-    //var contactSubmitEndpoint = "https://google.com/failure";
-    var pageHostname = document.location.hostname;
+	const submitButton = document.getElementById('contactSubmit');
+	const spinner = document.getElementById('contactSpinner');
+	const successAlert = document.getElementById('contactSuccess');
+	const errorAlert = document.getElementById('contactError');
 
-    switch (pageHostname) {
-        case "localhost":
-            contactSubmitEndpoint = "http://localhost:8042/submit"
-            simulateSubmit = window.simulateSubmit? true:false;
-            break;
-    
-        default:
-            break;
-    }
-    
+	let contactSubmitEndpoint = 'https://formspree.io/f/xdoyvqab';
+	const hostname = window.location.hostname;
 
-    $window.on('load',function(){
-        var $contactForm = $('#contactForm'),
-            $contactName = $('#contactName'),
-            $contactEmail = $('#contactEmail'),
-            $contactCompany = $('#contactCompany'),
-            $contactMessage = $('#contactMessage'),
-            $contactSubmit = $('#contactSubmit'),
-            $contactSuccess = $('#contactSuccess');
-            $contactError = $('#contactError');
-        
+	if (hostname === 'localhost') {
+		contactSubmitEndpoint = 'http://localhost:8042/submit';
+	}
 
-        $contactForm.submit((event)=>{
-            event.preventDefault();
-            $contactSubmit.addClass('disabled');
-            $contactSubmit.prop('disabled',true);
-            var submissionData = {
-                name:$contactName.val(),
-                email:$contactEmail.val(),
-                company:$contactCompany.val(),
-                message:$contactMessage.val()
-            }
-            submitForm(submissionData);
-        })
+	const toggleSubmitting = (isSubmitting) => {
+		if (isSubmitting) {
+			submitButton?.classList.add('disabled');
+			submitButton?.setAttribute('disabled', 'disabled');
+			spinner?.classList.remove('d-none');
+		} else {
+			submitButton?.classList.remove('disabled');
+			submitButton?.removeAttribute('disabled');
+			spinner?.classList.add('d-none');
+		}
+	};
 
-        function submitForm(data){
-            let {simulateSubmit,simulateError} = checkSim();
-            if(simulateSubmit){
-                if(simulateError){
-                    console.log("Throw simulated Error")
-                    onSubmitError(new Error("A simulated Error occurred!"))
-                } else {
-                    console.log("Simulated success");
-                    onSubmitSuccess("You did it hooray!");
-                }
-            } else {
-                $.post(contactSubmitEndpoint,data,onSubmitSuccess,'json').fail(onSubmitError);
-            }
-            
-        }
+	const checkSimulatedSubmission = () => ({
+		simulateSubmit: window.simulateSubmit === true,
+		simulateError: window.simulateError === true,
+	});
 
-        function checkSim(){
-            let sim = {simulateSubmit:false,simulateError:false};
-            if(window.simulateSubmit !== true){
-                return sim;
-            }
-            sim.simulateSubmit = true;
-            sim.simulateError = window.simulateError === true?true:false;
-            return sim;
-        }
+	const submitForm = async (formData) => {
+		const { simulateSubmit, simulateError } = checkSimulatedSubmission();
+		if (simulateSubmit) {
+			await new Promise((resolve, reject) =>
+				setTimeout(simulateError ? reject : resolve, 400)
+			);
+			return;
+		}
 
-        function onSubmitSuccess(){
-            $contactForm.fadeOut(500,()=>{$contactSuccess.fadeIn(500)});
-            // $contactSuccess.removeClass('hidden');
+		const response = await fetch(contactSubmitEndpoint, {
+			method: 'POST',
+			body: formData,
+			headers: {
+				Accept: 'application/json',
+			},
+		});
 
-        }
-        function onSubmitError(error){
-            $contactError.fadeIn(100);
-        }
-    });
+		if (!response.ok) {
+			throw new Error('Submission failed');
+		}
+	};
 
+	form.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		successAlert?.classList.add('d-none');
+		errorAlert?.classList.add('d-none');
+		toggleSubmitting(true);
 
-})(jQuery);
+		const data = new FormData(form);
+
+		try {
+			await submitForm(data);
+			form.classList.add('d-none');
+			successAlert?.classList.remove('d-none');
+		} catch (error) {
+			errorAlert?.classList.remove('d-none');
+		} finally {
+			toggleSubmitting(false);
+		}
+	});
+})();
